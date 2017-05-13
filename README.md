@@ -96,7 +96,7 @@ Since we want to improve the ability of our algorithm to detect complex chords, 
 By computing the cosine similarity between chroma vectors and the template for each frame, we obtain the Chordgram as a result. 
 
 Here's the Chordgram produced.
-![chordgram.png](https://github.com/lingyigu/chord-recognition/blob/master/visualizations/chordgram.png)
+![chordgram](https://github.com/lingyigu/chord-recognition/blob/master/visualizations/chordgram.png)
 
 #### Chord Sequence Estimation
 We can also estimate the chord sequences from the Chordgram obtained.
@@ -110,6 +110,9 @@ Sometimes we need a larger filter size since it will make the smoothing stronger
 We may also repeat the smoothing process to obtain a more accurate results.
 
     R[r] = mode { R[r - w / 2], ..., R[r + w / 2]}
+
+Here's the Chordgram produced after smoothing.
+![chordgram-smoothed](https://github.com/lingyigu/chord-recognition/blob/master/visualizations/chordgram-smoothed.png)
 
 ###### Results
 According to the smoothed Chordgram, we obtain the most likely chord for each frame using cosine similarity.
